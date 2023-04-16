@@ -71,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               bottomRight: Radius.circular(10)),
                         ),
                         child: TextField(
+                          autofocus: false,
                           controller: searchCtrl,
                           readOnly: provider.data_loading ? true : false,
                           onChanged: (val) {
@@ -79,14 +80,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             }
                           },
                           onSubmitted: (val) {
-                            provider.searchNews(val.toLowerCase());
+                            if (val.isNotEmpty) {
+                              provider.searchNews(val.toLowerCase());
+                            }
                           },
                           decoration: InputDecoration(
                               suffixIcon: InkWell(
                                   onTap: provider.data_loading
                                       ? () => false
                                       : () {
-                                          provider.searchNews(searchCtrl.text.toLowerCase()); //get news list of search value on click
+                                          if (searchCtrl.text.isNotEmpty) {
+                                            provider.searchNews(searchCtrl.text.toLowerCase());
+                                          }
+                                          //get news list of search value on click
                                         },
                                   child: Icon(
                                     Icons.search,
