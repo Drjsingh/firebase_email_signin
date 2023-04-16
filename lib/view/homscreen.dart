@@ -73,12 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: TextField(
                           controller: searchCtrl,
                           onChanged: (val) {
-                            if (val.length >= 3) {
+                            if (val.isEmpty) {
                               provider.searchNews(val.toLowerCase());
                             }
-                          },
-                          onSubmitted: (val) {
-                            provider.searchNews(val.toLowerCase());
                           },
                           decoration: InputDecoration(
                               prefixIcon: InkWell(
@@ -87,7 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                       : () {
                                           provider.searchNews(searchCtrl.text.toLowerCase());
                                         },
-                                  child: Icon(Icons.search)),
+                                  child: Icon(
+                                    Icons.search,
+                                    color: provider.data_loading ? Color(0xffF6E7E4) : Color(0xff666666),
+                                  )),
                               focusedBorder: const OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide: BorderSide(width: 2, color: Color(0xff8FC046)),
