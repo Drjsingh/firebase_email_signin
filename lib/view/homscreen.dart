@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   onTap: provider.data_loading
                                       ? () => false
                                       : () {
-                                          provider.searchNews(searchCtrl.text.toLowerCase());
+                                          provider.searchNews(searchCtrl.text.toLowerCase()); //get news list of search value on click
                                         },
                                   child: Icon(
                                     Icons.search,
@@ -120,7 +120,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => WebViewNews(widget.emailId, data[index])),
+                                    MaterialPageRoute(
+                                        builder: (context) => WebViewNews(widget.emailId, data[index])), //to view more information of news
                                   );
                                 },
                                 child: Container(

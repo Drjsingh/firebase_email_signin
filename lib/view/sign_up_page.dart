@@ -51,6 +51,10 @@ class _SignUpUserState extends State<SignUpUser> {
                         width: 100,
                       ),
                     ),
+                    Text(
+                      "Create an Account",
+                      style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                    ),
                     Form(
                       key: _formkey,
                       child: Column(
@@ -208,7 +212,7 @@ class _SignUpUserState extends State<SignUpUser> {
                                   onPressed: () async {
                                     if (_formkey.currentState!.validate()) {
                                       var uid = await AuthService.instance?.signUp(_emailctrl.text, _pwdctrl.text);
-                                      print("uid----------------$uid");
+
                                       if (uid['status'] == 200) {
                                         Popup().RegisterSuccessfully(context);
                                       } else {

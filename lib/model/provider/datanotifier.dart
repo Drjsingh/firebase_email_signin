@@ -19,6 +19,7 @@ class DataNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
+  //function for getting news list according to search value
   searchNews(searchKey) {
     getNewsDetails(searchKey);
   }
@@ -27,7 +28,6 @@ class DataNotifier extends ChangeNotifier {
     data_loading = true;
     _data.clear();
     for (int i = 0; i < categorie.length; i++) {
-      print(categorie[i]);
       var news_response = await ApiService().fetchNewsData(categorie[i]); //fetch data from given url
 
       if (news_response['success'] == true) {
@@ -49,8 +49,6 @@ class DataNotifier extends ChangeNotifier {
         });
       }
     }
-
-    print("daata-------------------${data}");
     data_loading = false;
     notifyListeners();
   }

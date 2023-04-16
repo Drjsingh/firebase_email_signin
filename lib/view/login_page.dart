@@ -190,7 +190,7 @@ class _Login_pageState extends State<Login_page> {
                             children: <TextSpan>[
                               const TextSpan(text: "Don't have an account?  ", style: TextStyle(color: Colors.black)),
                               TextSpan(
-                                  text: 'Sign up',
+                                  text: 'Create Account',
                                   style: const TextStyle(decoration: TextDecoration.underline, color: Colors.green),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {

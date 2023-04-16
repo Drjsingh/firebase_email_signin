@@ -33,7 +33,6 @@ class AuthService {
   Future<auth.User?> logIn(String email, String password) async {
     try {
       auth.UserCredential authResult = await _auth.signInWithEmailAndPassword(email: email, password: password);
-      print("authResult---------------${authResult}");
       return authResult.user;
     } catch (_) {
       return null;
