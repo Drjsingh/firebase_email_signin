@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "483268599973",
+    "project_id": "letmegrab-f16f3",
+    "storage_bucket": "letmegrab-f16f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483268599973:android:7f247a48015b933c2aed4c",
+        "android_client_info": {
+          "package_name": "com.example.letmegrab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483268599973-9gv8ernu6e3q648v07338v9753meti97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.letmegrab",
+            "certificate_hash": "60ef33418ee336af55636d41bdcadcc0b689e2c4"
+          }
+        },
+        {
+          "client_id": "483268599973-dn05lp8tj6juff6h3t58m1vsfqofinsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNO2AtSaVAmh-ZQUPK5mB53eM-yTv9zFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483268599973-dn05lp8tj6juff6h3t58m1vsfqofinsf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "483268599973-3pe25remnarsbfghftsa2b3dnh39e55c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.letmegrab"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
