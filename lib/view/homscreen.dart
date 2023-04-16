@@ -72,13 +72,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: TextField(
                           controller: searchCtrl,
+                          readOnly: provider.data_loading ? true : false,
                           onChanged: (val) {
                             if (val.isEmpty) {
                               provider.searchNews(val.toLowerCase());
                             }
                           },
+                          onSubmitted: (val) {
+                            provider.searchNews(val.toLowerCase());
+                          },
                           decoration: InputDecoration(
-                              prefixIcon: InkWell(
+                              suffixIcon: InkWell(
                                   onTap: provider.data_loading
                                       ? () => false
                                       : () {
@@ -96,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 borderSide: BorderSide(width: 1, color: Color(0xff8FC046)),
                                 borderRadius: BorderRadius.all((Radius.circular(10))),
                               ),
-                              contentPadding: const EdgeInsets.only(top: 10),
+                              contentPadding: const EdgeInsets.only(left: 20, top: 10),
                               hintText: "Category/Title Search"),
                         ),
                       ),

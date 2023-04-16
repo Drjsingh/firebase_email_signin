@@ -42,7 +42,7 @@ class _SignUpUserState extends State<SignUpUser> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       backgroundColor: Colors.transparent,
                       radius: 50,
                       child: Image(
@@ -51,7 +51,7 @@ class _SignUpUserState extends State<SignUpUser> {
                         width: 100,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Create an Account",
                       style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
                     ),
